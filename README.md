@@ -9,6 +9,24 @@ The pipeline involves the following steps:
 2. **Train/Test split**;
 3. **Concept drift detection using Transcendent (Conformal Evaluation)**.
 
+In the following figure, an overview of the workflow:
+```mermaid
+
+flowchart TD
+    A[PE dataset]@{ shape: cyl }
+
+    C[EMBER service]
+    D[DecSecrets service]
+    E[Train/Test Split]
+    F[Train/Test Split]
+    G[Transcendent]
+
+    A --> C -- ✅ --> F -- ✅ --> G
+    A --> E -- ✅ --> D -- ✅ --> G
+
+```
+
+
 ## Prerequisites
 - Make sure you have a running and active version of [Docker](https://docs.docker.com/engine/install/).
 
