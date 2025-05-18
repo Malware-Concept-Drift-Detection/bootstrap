@@ -5,9 +5,9 @@ This repository allows the user to *run* the Concept Drift Detection Pipeline.
 
 The pipeline involves the following steps:
 
-1. **Feature extraction**;
-2. **Train/Test split**;
-3. **Concept drift detection using Transcendent (Conformal Evaluation)**.
+1. **Feature extraction** ([EMBER Service](https://github.com/Malware-Concept-Drift-Detection/ember-features-extraction) or [Decoding-the-Secrets Service](https://github.com/Malware-Concept-Drift-Detection/dts-features-extraction);
+2. **Train/Test split** ([Train/Test Split Service](https://github.com/Malware-Concept-Drift-Detection/train-test-splits));
+3. **Concept drift detection using Conformal Evaluation** ([Transcendent Multiclass Service](https://github.com/Malware-Concept-Drift-Detection/train-test-splits)).
 
 In the following figure, an overview of the workflow:
 ```mermaid
