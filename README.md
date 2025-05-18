@@ -38,23 +38,9 @@ Note that for *Decoding-the-Secrets* features, the train/test dataset split shou
     ```bash
     git clone git@github.com:Malware-Concept-Drift-Detection/bootstrap.git && cd bootstrap
     ```
-2. Configure the train/test split.
-   
-    By default, two train/test splits are performed, specifically suited for **Norton670** dataset, a random and a time-based train/test split.
-    If you have a different set of PE files, implement your own train/test splits:
-     1. Write a script inside `split_scripts/`;
-     2. Follow the instructions given in the [transcendent-multiclass](https://github.com/Malware-Concept-Drift-Detection/transcendent-multiclass) project to adhere to the output files and directory structure;
-     3. Change the Dockerfile command, selecting the newly created script.
-
-4. Configure `run_pipeline.sh`.
-   
-   Edit the variables if you want to change the base input and output directories.
-   `run_pipeline.sh` default operation is:
-   1. Extracting EMBER features;
-   2. Performing a random and time-based train/test split, based on the code in this repository;
-   3. Running Concept drift detection using the time-based split only.
-5. *Run* the pipeline:
-   
+2. *Run* the pipeline using the scripts provided in this repository.
+   For example:
    ```bash
-   bash run_pipeline.sh
+   bash norton670_dts_time_based.sh
    ```
+    This script extracts *Decoding-the-Secrets* features from the *Norton670* dataset and applies *Transcendent*-based Concept drift detection using a *time-based* train/test split.
