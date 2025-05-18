@@ -39,8 +39,15 @@ Note that for *Decoding-the-Secrets* features, the train/test dataset split shou
     git clone git@github.com:Malware-Concept-Drift-Detection/bootstrap.git && cd bootstrap
     ```
 2. *Run* the pipeline using the scripts provided in this repository.
+
    For example:
+
    ```bash
    bash norton670_dts_time_based.sh
    ```
-    This script extracts *Decoding-the-Secrets* features from the *Norton670* dataset and applies *Transcendent*-based Concept drift detection using a *time-based* train/test split.
+
+    Extracts *Decoding-the-Secrets* features from the *Norton670* PE files and applies *Transcendent*-based Concept drift detection using a *time-based* train/test split.
+
+## Authors
+
+- Luca Fabri
